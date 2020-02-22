@@ -2,13 +2,13 @@
 - name: Fetch k3sup setup
   get_url:
     url: https://get.k3sup.dev
-    dest: /usr/sbin/getk3sup.sh
+    dest: /usr/local/bin/getk3sup.sh
     mode: 0755
   become: yes
   register: fetchgetk3sup
 
 - name: Install k3sup binary
   when: fetchgetk3sup is succeeded
-  command: /usr/sbin/getk3sup.sh
+  command: /usr/local/bin/getk3sup.sh
   become: yes
   register: installk3sup

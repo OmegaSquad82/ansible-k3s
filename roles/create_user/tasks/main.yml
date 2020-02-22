@@ -22,5 +22,5 @@
 - name: Set SSH key
   authorized_key:
     user: "{{k3s_username}}"
-    key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
+    key: "{{ lookup('file', ssh_key + '.pub') }}"
     state: present

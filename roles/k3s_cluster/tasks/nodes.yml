@@ -9,6 +9,8 @@
       - "{{hostvars[groups.master.0].ansible_facts.eth0.ipv4.address}}"
       - --ip
       - "{{hostvars[item].ansible_default_ipv4.address}}"
+      - --ssh-key
+      - "{{ssh_key}}"
       - --user
       - "{{k3s_username}}"
       - --k3s-version

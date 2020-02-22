@@ -1,2 +1,3 @@
 ---
 k3s_username: 'k3s'
+ssh_key: '~/.ssh/id_rsa'
